@@ -31,4 +31,9 @@ class BinarySearchTree:
                     return True
                 temp = temp.right
         
-        
+my_tree = BinarySearchTree()
+my_tree.insert(2)
+my_tree.insert(1)
+my_tree.insert(3)
+
+print(my_tree.root.value, my_tree.root.left.value, my_tree.root.right.value)
