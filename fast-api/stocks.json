@@ -1,0 +1,25 @@
+{
+    "stocks": [
+        {
+            "symbol": "TSLA",
+            "stockname": "Tesla Inc. Common Stock",
+            "lastsale": "$235.45",
+            "country": "United States",
+            "ipoyear": 2010
+        },
+        {
+            "symbol": "NVDA",
+            "stockname": "NVIDIA Corporation Common Stock",
+            "lastsale": "$477.76",
+            "country": "United States",
+            "ipoyear": 1999
+        },
+        {
+            "symbol": "AMZN",
+            "stockname": "Amazon.com Inc. Common Stock",
+            "lastsale": "$146.74",
+            "country": "United States",
+            "ipoyear": 1997
+        }
+    ]
+}
