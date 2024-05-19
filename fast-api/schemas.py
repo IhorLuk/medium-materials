@@ -16,3 +16,23 @@ class Stock(StockBase):
     
     class Config:
         orm_mode = True
+
+class UserBase(BaseModel):
+    user_id: str
+
+class User(UserBase):
+    first_name: str
+    last_name: str
+    last_sale_amount: int
+    
+    class Config:
+        orm_mode = True
+        
+class UserCreate(User):
+    pass
+
+class UserUpdateSaleAmount(UserBase):
+    last_sale_amount: int
+    
+    class Config:
+        orm_mode = True

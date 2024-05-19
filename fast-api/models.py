@@ -15,3 +15,11 @@ class Stock(Base):
     volume = Column(Integer)
     sector = Column(String, nullable=True)
     industry = Column(String, nullable=True)
+
+class User(Base):
+    __tablename__ = "users"
+    
+    user_id = Column(String, primary_key=True)
+    first_name = Column(String)
+    last_name = Column(String)
+    last_sale_amount = Column(Integer)
