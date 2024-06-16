@@ -3,9 +3,16 @@ import requests
 from datetime import datetime as dt
 from datetime import timedelta
 import matplotlib.pyplot as plt
+import textwrap
 
 parser = argparse.ArgumentParser(
-    description="Weather forecast with OpenWeatherAPI"
+    formatter_class=argparse.RawDescriptionHelpFormatter,
+    description=textwrap.dedent("""\
+                                Weather forecast with OpenWeatherAPI
+                                -----------------------------------------
+                                    Saves image locally with forecast
+                                    for city and date (today or tomorrow)
+                                """)
 )
 parser.add_argument("--key",
                     "-K",
@@ -22,12 +29,13 @@ parser.add_argument("--day",
                     "-D",
                     help="Day of weather forecast, either today or tomorrow.",
                     choices=["today", "tomorrow"],
+                    default="today",
                     type=str)
 
 args = parser.parse_args()
 
 API_KEY = args.key
-cities = args.city #"Chiang Mai,TH"
+cities = args.city
 
 def save_plot(hours, temps, feel_temps, pops, date, city):
     fig, ax1 = plt.subplots(figsize=(8, 5))
